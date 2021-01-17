@@ -27,7 +27,7 @@ Prerequisites to install app
 After cloning the git repository and changing directory to root of repository, run:
 
 ```bash
-yarn && cd client && yarn
+yarn && cd client && yarn && cd ..
 ```
 
 And then to start app, run:
