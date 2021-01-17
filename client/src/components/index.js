@@ -1,3 +1,4 @@
 export { ImageUploadButton } from "./ImageUploadButton";
 export { ImageUploadDashboardModal } from "./ImageUploadDashboardModal"
-export { Searchbar } from "./Searchbar";
+export { ImageGrid } from "./ImageGrid";
+export { RefreshButton } from "./RefreshButton";
