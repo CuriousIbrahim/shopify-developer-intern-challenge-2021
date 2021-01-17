@@ -1,13 +1,16 @@
 import {
-    ImageUpload
+    Button
+} from "@material-ui/core";
+
+import {
+    ImageUploadButton
 } from "../components"
 
 export const AddPage = function() {
     return (
         <div className="IndexPage">
-            add pages
-
-            <ImageUpload open={true} />
+            
+            <ImageUploadButton />
         </div>
     );
 }

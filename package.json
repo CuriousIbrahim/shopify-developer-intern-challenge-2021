@@ -6,7 +6,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "devServer": "nodemon server.js"
+    "devServer": "nodemon server.js",
+    "devBuild": "cd client && yarn start",
+    "dev": "concurrently -n server,client \"yarn run devServer\" \"yarn run devBuild\""
   },
   "dependencies": {
     "@uppy/companion": "^2.4.0",
@@ -20,6 +22,7 @@
     "multer": "^1.4.2"
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.7"
   }
 }

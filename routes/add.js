@@ -11,15 +11,14 @@ const storage = multer.diskStorage({
     }
 })
 
-// const upload = multer ( { dest: "../images/"} );
-
 const uploadImage = multer( { storage } ).single("photo");
 
-
-// upload.fields([{name: "photo", maxCount: 100}])
-
 router.post('/', uploadImage, (req, res, next) => {
-    console.log("request:", req.body, req.file);
+    if (req.file || req.files) {
+        res.sendStatus(200);
+    } else {
+        res.sendStatus(500);
+    }
 });
 
 module.exports = router

@@ -10,6 +10,7 @@ const multer = require("multer");
 
 
 const add = require("./routes/add");
+const get = require("./routes/get");
 
 const app = express();
 
@@ -64,6 +65,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
+app.use('/images', express.static('images'))
+
 const upload = multer ( { dest: "./images/"} );
 
 // const uploadImage = multer( { storage } ).single("photo");
@@ -76,6 +79,7 @@ app.post('/upload', upload.single("photo"), (req, res, next) => {
 });
 
 app.use("/add", add);
+app.use("/get", get);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");

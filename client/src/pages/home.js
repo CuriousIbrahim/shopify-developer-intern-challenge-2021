@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
+import {
+  ImageUploadButton
+} from "../components"
 
 export const HomePage = function () {
   return (
     <div className="HomePage">
-      <Link to="/add">Add Image(s)</Link>
-
-      <br />
-
-      <Link to="/search">Search Images</Link>
+      <ImageUploadButton />
     </div>
   );
 }
