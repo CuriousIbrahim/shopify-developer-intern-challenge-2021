@@ -18,8 +18,6 @@ class RefreshButton extends react.Component {
             .then((res) => {
                 const data = res.data;
 
-                console.log(data);
-
                 if (this.state.hash === undefined) {
                     this.setState({
                         hash: data.hash
@@ -38,13 +36,10 @@ class RefreshButton extends react.Component {
                 });
                 
                 this.props.addImages(images);
-
-                console.log(images);
             });
     }
 
     render() {
-        console.log(this.props.open);
         return (
             <div className="RefreshButton">
                 <Button color="primary" onClick={this.getImages}>Refresh</Button>

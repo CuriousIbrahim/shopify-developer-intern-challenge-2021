@@ -2,8 +2,8 @@ import react  from "react";
 import { Button } from "@material-ui/core";
 import { connect } from "react-redux";
 
-import { openUploadImageModal } from "../../actions/imageUploadModal"
-import { ImageUploadDashboardModal } from "../ImageUploadDashboardModal";
+import { openUploadImageModal } from "../../actions"
+import { ImageUploadDashboardModal } from "../";
 
 class ImageUploadButton extends react.Component {
 
@@ -15,11 +15,9 @@ class ImageUploadButton extends react.Component {
 
     toggleUploadModal() {
         this.props.openUploadImageModal();
-        console.log(this.props.open);
     }
 
     render() {
-        console.log(this.props.open);
         return (
             <div className="ImageUploadButton">
                 <Button color="primary" onClick={this.toggleUploadModal}>Upload Image(s)</Button>

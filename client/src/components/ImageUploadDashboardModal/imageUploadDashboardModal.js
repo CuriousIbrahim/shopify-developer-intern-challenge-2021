@@ -1,13 +1,14 @@
 import '@uppy/core/dist/style.css'
 import '@uppy/dashboard/dist/style.css'
+
 import react from "react";
 import { connect } from "react-redux";
-import { closeUploadImageModal } from "../../actions/imageUploadModal"
 
-const Uppy = require('@uppy/core')
-const XHRUpload = require('@uppy/xhr-upload')
-const { DashboardModal } = require('@uppy/react')
+import { closeUploadImageModal } from "../../actions"
 
+const Uppy = require("@uppy/core")
+const XHRUpload = require("@uppy/xhr-upload")
+const { DashboardModal } = require("@uppy/react")
 
 class ImageUploadDashboardModal extends react.Component {
   constructor(props) {
@@ -21,9 +22,6 @@ class ImageUploadDashboardModal extends react.Component {
       });
   }
 
-  // componentWillUnmount() {
-  //   this.props.closeUploadImageModal();
-  // }
   onRequestClose() {
     this.props.closeUploadImageModal();
   }

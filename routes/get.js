@@ -9,7 +9,6 @@ const IMAGES_PATH = path.join(__dirname, "../images");
 
 router.get('/', (req, res) => {
     const files = fs.readdirSync(IMAGES_PATH, []);
-    console.log(IMAGES_PATH)
     const hash = crypto.createHash("md5").update(JSON.stringify(files)).digest("hex");
 
     return res.json({
